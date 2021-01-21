@@ -1,8 +1,8 @@
 ## OpenWrt X86-64bit Firmware 
 #### ⚠ WARNING: USE IT UNDER YOUR OWN RISK. Non profit use only ⚠ 
-![R4S-OpenWrt-Without-Docker](https://github.com/quintus-lab/OpenWRT-for-X64/workflows/OpenWRT-x86-64bit/badge.svg)
+![R4S-OpenWrt-Without-Docker](https://github.com/quintus-lab/OpenWRT-x86/workflows/OpenWRT-x86-64bit/badge.svg)
 
-##### Download: [Releases](https://github.com/quintus-lab/OpenWRT-for-X64/releases) or [Actions](https://github.com/quintus-lab/OpenWRT-for-X64/actions) \(Login Needed\)
+##### Download: [Releases](https://github.com/quintus-lab/OpenWRT-x86/releases) or [Actions](https://github.com/quintus-lab/OpenWRT-x86/actions) \(Login Needed\)
 - - -
 ## Introduction
 - ### Usage
@@ -26,6 +26,6 @@
 - [Lean](https://github.com/coolsnowwolf/lede)
 
 ### License
-[GNU General Public License v3.0](https://github.com/quintus-lab/OpenWRT-for-X64/blob/master/LICENSE)
+[GNU General Public License v3.0](https://github.com/quintus-lab/OpenWRT-x86/blob/master/LICENSE)
 
 🇹🇼🇨🇦🇺🇸🇭🇰
