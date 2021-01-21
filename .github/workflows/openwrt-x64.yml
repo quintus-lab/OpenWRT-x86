@@ -6,7 +6,6 @@
 name: OpenWRT-x86-64bit
 
 on:
-on:
 #  release:
 #    types: published
   push:
