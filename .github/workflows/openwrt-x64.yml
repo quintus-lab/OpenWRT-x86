@@ -58,7 +58,7 @@ jobs:
           docker rmi $(docker image ls -aq)
           df -h
           /bin/bash ./script/free_disk_space.sh
-       - name: Initialization environment
+      - name: Initialization environment
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
