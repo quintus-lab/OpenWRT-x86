@@ -41,7 +41,7 @@ jobs:
           echo "UPLOAD_BIN_DIR=false" >> $GITHUB_ENV
           echo "UPLOAD_FIRMWARE=true" >> $GITHUB_ENV
           echo "UPLOAD_RELEASE=true" >> $GITHUB_ENV
-          echo "CONFIG_FILE=r4s.seed" >> $GITHUB_ENV
+          echo "CONFIG_FILE=x86.seed" >> $GITHUB_ENV
           echo "TZ=Asia/Shanghai" >>$GITHUB_ENV
           echo "Build_Date=$(date +%Y.%m.%d)" >> $GITHUB_ENV
           
