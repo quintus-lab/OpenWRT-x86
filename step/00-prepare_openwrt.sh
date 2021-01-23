@@ -10,6 +10,9 @@ sed -i '5s/src-git/#src-git/g' ./feeds.conf.default
 patch -p1 < ../patches/0000-use_json_object_new_int64.patch
 #Add upx-ucl support
 patch -p1 < ../patches/0001-tools-add-upx-ucl-support.patch
+# replace with ctcgfw source
+rm -rf target/linux/x86
+svn co https://github.com/project-openwrt/openwrt/branches/master/target/linux/x86/ target/linux/x86/
 
 #dnsmasq aaaa filter
 patch -p1 < ../patches/1001-dnsmasq_add_filter_aaaa_option.patch
