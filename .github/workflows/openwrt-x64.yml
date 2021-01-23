@@ -144,6 +144,6 @@ jobs:
           tag: OpenWrt
           commit: master
           replacesArtifacts: true
-          token: ${{ secrets.RELEASES_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           bodyFile: "body-origin.md"
           artifacts: ./artifact/*.zip,./artifact/x64.*
