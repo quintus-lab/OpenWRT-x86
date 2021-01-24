@@ -31,6 +31,7 @@ svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/lean/
 svn co https://github.com/fw876/helloworld/trunk/tcping package/lean/tcping
 svn co https://github.com/fw876/helloworld/trunk/naiveproxy package/lean/naiveproxy
 svn co https://github.com/fw876/helloworld/trunk/trojan-go package/lean/trojan-go
+svn co https://github.com/fw876/helloworld/trunk/xray package/lean/xray
 #patch ssrp for xray trojan
 #wget -P package/lean https://patch-diff.githubusercontent.com/raw/fw876/helloworld/pull/316.patch
 #pushd package/lean
@@ -49,7 +50,6 @@ svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/ipt2socks package
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/simple-obfs package/lean/simple-obfs
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/trojan package/lean/trojan
 svn co https://github.com/project-openwrt/openwrt/trunk/package/lean/tcpping package/lean/tcpping
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/xray package/lean/xray
 svn co https://github.com/project-openwrt/openwrt/branches/master/package/lean/dnsforwarder package/lean/dnsforwarder
 
 #清理内存
