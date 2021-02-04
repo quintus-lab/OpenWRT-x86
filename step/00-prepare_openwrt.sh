@@ -4,6 +4,7 @@ clear
 #Update feed
 sed -i '4s/src-git/#src-git/g' ./feeds.conf.default
 sed -i '5s/src-git/#src-git/g' ./feeds.conf.default
+echo 'src-git addon https://github.com/quintus-lab/openwrt-package' >> ./feeds.conf.default
 ./scripts/feeds update -a && ./scripts/feeds install -a
 
 #patch jsonc
@@ -21,15 +22,6 @@ cp -f ../patches/911-dnsmasq-filter-aaaa.patch package/network/services/dnsmasq/
 
 #Fullcone & Shortcut-FE patch
 patch -p1 < ../patches/1002-add-fullconenat-and-shortcut-fe-support.patch
-#fullconenat module
-svn co https://github.com/project-openwrt/openwrt/branches/master/package/lean/openwrt-fullconenat package/lean/openwrt-fullconenat
-#SFE-sfe module
-svn co https://github.com/project-openwrt/openwrt/branches/master/package/lean/shortcut-fe package/lean/shortcut-fe
-svn co https://github.com/project-openwrt/openwrt/branches/master/package/lean/fast-classifier package/lean/fast-classifier
-
-#rtl usb wifi driver
-svn co https://github.com/project-openwrt/openwrt/branches/master/package/ctcgfw/rtl8821cu package/ctcgfw/rtl8821cu
-svn co https://github.com/project-openwrt/openwrt/branches/master/package/ctcgfw/rtl8812au-ac package/ctcgfw/rtl8812au-ac
 
 #update curl
 rm -rf ./package/network/utils/curl

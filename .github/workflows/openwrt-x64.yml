@@ -99,7 +99,6 @@ jobs:
           cd openwrt
           mv ../seed/$CONFIG_FILE .config
           make defconfig
-          chmod -R 755 ./
 
       - name: Make Toolchain
         run: |
