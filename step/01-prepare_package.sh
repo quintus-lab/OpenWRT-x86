@@ -9,7 +9,7 @@ rm -rf package/feeds/packages/coremark
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/lean/luci-app-ssr-plus
 svn co https://github.com/fw876/helloworld/trunk/tcping package/lean/tcping
 svn co https://github.com/fw876/helloworld/trunk/naiveproxy package/lean/naiveproxy
-svn co https://github.com/fw876/helloworld/trunk/xray package/lean/xray
+svn co https://github.com/fw876/helloworld/trunk/xray-core package/lean/xray-core
 
 #SSRP dependences
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/shadowsocksr-libev package/lean/shadowsocksr-libev
