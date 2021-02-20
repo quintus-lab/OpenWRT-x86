@@ -20,8 +20,9 @@ patch -p1 < ../patches/1001-dnsmasq_add_filter_aaaa_option.patch
 cp -f ../patches/910-mini-ttl.patch package/network/services/dnsmasq/patches/
 cp -f ../patches/911-dnsmasq-filter-aaaa.patch package/network/services/dnsmasq/patches/
 
-#Fullcone & Shortcut-FE patch
-patch -p1 < ../patches/1002-add-fullconenat-and-shortcut-fe-support.patch
+#Fullcone patch
+patch -p1 < ../patches/1002-add-fullconenat-support.patch
+patch -p1 < ../patches/1003-luci-app-firewall_add_fullcone.patch
 
 #update curl
 rm -rf ./package/network/utils/curl
