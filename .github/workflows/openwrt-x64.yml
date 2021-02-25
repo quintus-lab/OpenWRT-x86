@@ -101,16 +101,33 @@ jobs:
           make defconfig
 
       - name: Make Toolchain
+        id: compiletoolchain
+        continue-on-error: true
         run: |
           cd openwrt
           let make_process=$(nproc)+1
           make toolchain/install -j${make_process} V=s
 
+      - name: If toolchain Error
+        if: steps.compiletoolchain.outcome == 'failure'
+        run: |
+          echo '================================================================'
+          cd openwrt && make toolchain/install -j1 V=s
+
       - name: Compile Openwrt
+        id: compileopenwrt
+        continue-on-error: true
         run: |
           cd openwrt
           let make_process=$(nproc)+1
           make -j${make_process} V=s || make -j${make_process} V=s
+
+      - name: If compile openwrt Error
+        if: steps.compileopenwrt.outcome == 'failure'
+        run: |
+          cat openwrt/.config
+          echo '================================================================'
+          cd openwrt && make -j1 V=s
 
       - name: Organize files
         id: organize
@@ -125,6 +142,8 @@ jobs:
           cd ../openwrt
           cp .config ../artifact/x64.config
           ./scripts/diffconfig.sh > ../artifact/x64.seed
+          ls -Ahl
+          sha256sum *squashfs** | tee x64-sfs-$(date +%Y-%m-%d).sha256sum
 
       - name: Upload artifact
         uses: actions/upload-artifact@main
@@ -145,4 +164,4 @@ jobs:
           replacesArtifacts: true
           token: ${{ secrets.GITHUB_TOKEN }}
           bodyFile: "body-origin.md"
-          artifacts: ./artifact/*.zip,./artifact/x64.*
+          artifacts: ./artifact/*.zip,./artifact/x64.*,./artifact/*.sha256sum
